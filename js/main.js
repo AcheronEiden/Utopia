@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Load the navigation bar
     fetch('/_nav.html')
         .then(response => response.text())

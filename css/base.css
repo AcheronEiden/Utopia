@@ -99,7 +99,8 @@ h4 {
     margin-bottom: 10px;
 }
 
-p, li {
+p,
+li {
     margin-bottom: 10px;
 }
 
@@ -179,23 +180,26 @@ footer {
 }
 
 .character-profile h5 {
-   font-family: 'EB Garamond', serif;
-   font-size: 1.5em;
-   color: #f5f5f5;
-   margin: 0 0 10px 0;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5em;
+    color: #f5f5f5;
+    margin: 0 0 10px 0;
 }
 
 /* --- Nested Lists --- */
 ul ul {
     margin-top: 10px;
-    margin-left: 25px; /* Adds indentation */
+    margin-left: 25px;
+    /* Adds indentation */
 }
 
 /* --- Law Box Layout --- */
 .laws-container {
     display: flex;
-    flex-wrap: wrap; /* This allows items to wrap to the next line */
-    gap: 20px; /* This creates space between the boxes */
+    flex-wrap: wrap;
+    /* This allows items to wrap to the next line */
+    gap: 20px;
+    /* This creates space between the boxes */
 }
 
 .law-box {
@@ -203,7 +207,8 @@ ul ul {
     border: 1px solid #444;
     border-radius: 5px;
     padding: 20px;
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 300px;
+    /* Flex-grow, flex-shrink, flex-basis */
 }
 
 .law-box h4 {
@@ -222,15 +227,16 @@ ul ul {
 }
 
 .powerhouse-entry h5 {
-   font-family: 'EB Garamond', serif;
-   font-size: 1.5em;
-   color: #f5f5f5;
-   margin: 0 0 10px 0;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5em;
+    color: #f5f5f5;
+    margin: 0 0 10px 0;
 }
 
 .system-message {
     font-style: italic;
-    color: #ff6b6b; /* A warning red color */
+    color: #ff6b6b;
+    /* A warning red color */
     border: 1px solid #8d3a3a;
     padding: 10px;
     border-radius: 4px;
@@ -319,7 +325,7 @@ ul ul {
     position: absolute;
     background-color: #1e1e1e;
     min-width: 220px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 4px;
     border-top: 2px solid #990000;
