@@ -1,0 +1,110 @@
+/* --- Faction Hierarchy Styles --- */
+
+/* Main container for a single faction's chart */
+.faction-card {
+    background-color: #1e1e1e;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+/* Header section with emblem and description */
+.faction-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Styling for the faction emblem image */
+.faction-emblem img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Container for the description text */
+.faction-description h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.faction-description p {
+    margin-bottom: 15px;
+}
+
+/* Container for the hierarchy chart below the header */
+.faction-hierarchy {
+    text-align: center;
+}
+
+/* Styling for the leader at the top */
+.faction-leader {
+    display: inline-block;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* The vertical line connecting leader to subordinates */
+.connector {
+    width: 2px;
+    height: 30px;
+    background-color: #444;
+    margin: 0 auto;
+}
+
+/* Container for all the subordinate members */
+.subordinates {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 30px;
+    position: relative;
+}
+
+/* A single subordinate member */
+.subordinate-item {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    padding: 8px 15px;
+    border-radius: 5px;
+    flex-basis: 22%;
+    min-width: 150px;
+    position: relative;
+}
+
+/* The vertical line above each subordinate */
+.subordinate-item::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background-color: #444;
+}
+
+.subordinates::after {
+    content: '';
+    position: absolute;
+    top: 0; /* Aligns it with the top of the vertical connectors */
+    height: 2px;
+    background-color: #444;
+    
+    /* Starts the line at the center of the first child */
+    left: calc(11% + 7.5px); /* 11% is half of 22% basis, 7.5px is half of 15px gap */
+    
+    /* Ends the line at the center of the last child */
+    right: calc(11% + 7.5px);
+}
