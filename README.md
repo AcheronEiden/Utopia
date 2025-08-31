@@ -41,6 +41,12 @@ Under the following terms:
 
 If you wish to use this world for a commercial project, please feel free to reach out to me.
 
+## A Note on Assets and Attribution
+
+The images, names, and concepts used within this project are for the purpose of world-building and creative exploration. Some of these assets may be inspired by or sourced from various artists and creators.
+
+This is a non-commercial, personal project, and no copyright infringement is intended. If you are the original creator of any image or name used in this manual and wish for it to be removed or properly credited, please do not hesitate to contact me by opening an issue in this repository. I will promptly address your request.
+
 ## Feedback and Ideas
 
 While I am not actively seeking contributions to the core lore at this time, I am always open to feedback, ideas, and discussions. If you spot an inconsistency, have a question, or just want to talk about the world, feel free to open an issue in this repository.
