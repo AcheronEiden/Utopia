@@ -1,32 +1,6 @@
-/* --- Image Gallery (for the character profiles) --- */
-.image-gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 30px;
-}
+/* --- Styles for Character Pages --- */
 
-.image-gallery .gallery-item {
-    text-align: center;
-    flex-basis: 30%;
-    min-width: 250px;
-}
-
-.image-gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 2px solid #444;
-}
-
-.image-gallery .caption {
-    margin-top: 10px;
-    font-style: italic;
-    color: #aaa;
-}
-
-/* --- Character Stat Block Styling --- */
+/* Stat Block Styling (from base.css) */
 .stat-block {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -35,6 +9,7 @@
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
+    border: 1px solid #333;
 }
 
 .stat-block div {
@@ -43,5 +18,66 @@
 
 .stat-block .stat-label {
     font-weight: bold;
-    color: #c0c0c0;
+    color: var(--text-secondary);
+}
+
+/* --- New Tooltip Styles for Abilities --- */
+
+.tooltip-item {
+    position: relative; /* This is the anchor for the tooltip */
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #2a2a2a;
+    border-left: 3px solid var(--accent-color);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.tooltip-item:hover {
+    background-color: #333;
+}
+
+.tooltip-item .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 300px;
+    background-color: #1a1a1a;
+    color: var(--text-primary);
+    text-align: left;
+    border-radius: 6px;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the item */
+    left: 50%;
+    margin-left: -150px; /* Use half of the width to center the tooltip */
+    transition: opacity 0.3s;
+    border: 1px solid #444;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip-item:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tooltip Arrow */
+.tooltip-item .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1a1a1a transparent transparent transparent;
+}
+
+/* --- Special Class for Wider Tooltips --- */
+.tooltip-item .tooltip-text.wide-tooltip {
+    width: 500px; /* New, wider width */
+    margin-left: -250px; /* Half of the new width to keep it centered */
 }
