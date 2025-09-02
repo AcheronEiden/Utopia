@@ -248,6 +248,8 @@ ul ul {
     border-radius: 4px;
     background-color: #3c2a2a;
     margin-top: 15px;
+    /* Center the message */
+    text-align: center;
 }
 
 /* --- STYLES FOR RANK SUMMARY LIST --- */
